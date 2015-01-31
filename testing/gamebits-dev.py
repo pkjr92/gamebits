@@ -113,7 +113,7 @@ if review_link:
 else:
     review = ""
 
-    
+
 # Get + upload large cover image
 ign_style_data = soup.find("div", class_="contentBackground").get("style")
 if ign_style_data:
@@ -138,9 +138,13 @@ else:
 
 # Print everything
 if imgur_ign_image_url:
-    print "[center][img]" + imgur_ign_image_url + "[/img][/center]"
-    print
+    print "[center][img]" + imgur_ign_image_url + "[/img][/center]\n"
 
+"""
+if imgur_game_box_url:
+    print "[IMG]" + imgur_game_box_url + "[/IMG]"
+"""
+print "[b]Game Details[/b]"
 print "[quote]"
 print "[b]Platform: [/b]" + console.upper()
 print "[b]Publisher: [/b]" + publisher
@@ -148,6 +152,8 @@ print "[b]Developer: [/b]" + developer
 print "[b]Language: [/b]" + language
 print "[b]Release Date: [/b]" + date
 print "[/quote]"
+
+#print "[quote][align=center][size=3][url=http://www.icewinddale.com/]HomePage[/url]  |   [url=http://store.steampowered.com/app/321800/]Steam[/url]  |  [url=http://www.metacritic.com/game/pc/icewind-dale-enhanced-edition]Metacritic[/url][/size][/align][/quote]"
 
 print
 print "[b]Description[/b]"
@@ -162,7 +168,19 @@ for i, para in enumerate(description_paras):
     else:
         print "No description available"
         break
-        
+
+"""
+print "Features:"
+print "[list]"
+print "[*]    Swords and Sorcery: Discover dozens of new spells and items, including new magic armor and weapons."
+print "[*]    Blackguards and Wizard Slayers: Select from more than 30 new kits and classes to create the perfect adventuring party."
+print "[*]    Bring A Friend: Join your fellow adventurers in cooperative, cross-platform multiplayer games."
+print "[*]    More to Experience: Enjoy the countless bug fixes and improvements that await you in Icewind Dale: Enhanced Edition!"
+print "[/list]"
+
+additional_info = "Icewind Dale: Enhanced Edition includes both Heart of Winter and Trials of the Luremaster expansions."
+print additional_info
+"""
 
 if review:
     print
@@ -170,17 +188,29 @@ if review:
 print "[/quote]"
 print
 
+
+image_one = "https://images.baconbits.org/images/z8LeX.jpg"
+image_two = "https://images.baconbits.org/images/z8LeX.jpg"
+image_three = "https://images.baconbits.org/images/z8LeX.jpg"
+image_four = "https://images.baconbits.org/images/z8LeX.jpg"
 print "[quote][align=center]"
-print "[IMG]http://i.imgur.com/waqUStA.png[/IMG]"
-print "[IMG]http://i.imgur.com/waqUStA.png[/IMG]"
-print "[IMG]http://i.imgur.com/waqUStA.png[/IMG]"
+print "[IMG]" + image_one + "[/IMG]"
+print "[IMG]" + image_two + "[/IMG]"
+print "[IMG]" + image_three + "[/IMG]"
+print "[IMG]" + image_four + "[/IMG]"
 print "[/align][/quote]"
 
-print "[spoiler=NFO][quote][align=center]N/A[/quote][/align][/spoiler]"
+youtube = "https://www.youtube.com/watch?v=3-SvIG5VoQw"
+print "[quote]"
+print "[align=center][youtube]" + youtube + "[/youtube][/align]"
+print "[/quote]"
+
+
+#print "[spoiler=NFO][center][img=https://images.baconbits.org/images/o5W0U.png][/center][/spoiler]"
 print
 print "[b]Installation[/b]"
 print "[quote]"
 #install_info = "Run IcewindDale from the game dir."
 #print install_info
-print "N/A"
+print "There's nothing here."
 print "[/quote]"
